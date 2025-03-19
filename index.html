@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        .item {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form onsubmit="valForm(event)">
+        <label for="tennhiemvu">Tên nhiệm vụ:</label>
+        <input type="text" id="tennhiemvu" required>
+        <br><br>
+
+        <label for="ngayhethan">Ngày hết hạn:</label>
+        <input type="date" id="ngayhethan" required>
+        <br><br>
+
+        <label for="douutien">Độ ưu tiên:</label>
+        <select name="douutien" id="douutien">
+            <option value="cao">Cao</option>
+            <option value="trungbinh">Trung bình</option>
+            <option value="thap">Thấp</option>
+        </select>
+        <br><br>
+        <button id="submitBtn" type="submit" onclick="valForm(event)">Thêm todolist</button>
+
+
+        <!-- <button id="xoa(${i})">xóa</button> -->
+
+        <!-- <label for="tinhtrang">tinhtrang:</label>
+        <input type="radio">
+        <input type="radio">
+        <input type="radio">
+        <br><br> -->
+
+        <!-- <button type="submit">Thêm todolist</button> -->
+        <!-- </form> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên nhiệm vụ</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Độ ưu tiên</th>
+                </tr>
+            </thead>
+            <tbody id="todo_List"></tbody>
+        </table>
+
+
+        <script src="index.js"></script>
+</body>
+
+</html>
